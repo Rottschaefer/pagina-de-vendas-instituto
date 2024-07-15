@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
    @font-face {
     font-family: "giarek";
-    src: local("giarek"), url("/public/fonts/giarekdemoversionregular-d9za6.ttf") format("truetype");
+    src: local("giarek"), url("/fonts/giarekdemoversionregular-d9za6.ttf") format("truetype");
 
   }
 
