@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 export const StyledPageBegin = styled.div`
   overflow-x: hidden;
+  overflow-y: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,10 +10,10 @@ export const StyledPageBegin = styled.div`
   align-items: center;
   width: 100vw;
   min-height: auto;
-  /* height: 100vh; */
+  max-height: 140vh;
   padding-bottom: 3rem;
   background-color: #591527;
-  z-index: -1;
+  z-index: 0;
 `;
 
 export const StyledLogo = styled.img`
@@ -94,7 +95,6 @@ export const StyledForm = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  z-index: 0;
 `;
 
 export const StyledInput = styled.input`
@@ -126,4 +126,6 @@ export const StyledButton = styled.button`
   width: 80vw;
   max-width: 400px;
   margin-top: 10px;
+
+  cursor: pointer;
 `;

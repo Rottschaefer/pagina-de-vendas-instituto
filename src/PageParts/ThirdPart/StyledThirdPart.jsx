@@ -28,7 +28,7 @@ export const StyledBackground = styled.div`
 
 export const StyledSubTitle = styled.h2`
   font-family: "giarek";
-  font-size: 1.7rem;
+  font-size: 2rem;
   text-align: center;
   color: #591527;
   z-index: 0;
@@ -72,8 +72,12 @@ export const StyledSubTitle2 = styled.h2`
 `;
 
 export const StyledDescription = styled.p`
-  font-family: "giarek";
-  font-size: 1rem;
+  /* font-family: "giarek"; */
+
+  @media (max-width: 700px) {
+    font-size: 1.2rem;
+  }
+  font-size: 1.5rem;
   text-align: center;
   color: #591527;
   z-index: 1;

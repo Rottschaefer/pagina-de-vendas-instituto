@@ -2,11 +2,35 @@ import styled from "styled-components";
 import { IoIosArrowForward } from "react-icons/io";
 
 export const StyledCarousel = styled.div`
+  @media (max-width: 600px) {
+    max-width: 400px;
+    max-height: 80vh;
+  }
   position: relative;
-  height: 45vh;
+  min-height: 50vh;
+  height: 110vh;
   object-fit: cover;
-  width: 80vw;
+  width: 100vw;
+  max-width: 600px;
+  max-height: 1000px;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const StyledCarousel2 = styled.div`
+  min-height: 50vh;
+  height: 80%;
+  object-fit: cover;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const StyledImgs = styled.img`
@@ -18,6 +42,7 @@ export const StyledImgs = styled.img`
 `;
 
 export const StyledCarouselTrackContainer = styled.div`
+  width: 80vw;
   height: 100%;
   /* position: relative; */
   overflow: hidden;
@@ -25,6 +50,7 @@ export const StyledCarouselTrackContainer = styled.div`
 `;
 
 export const StyledCarouselTrack = styled.ul`
+  display: block;
   position: relative;
   height: 100%;
   transform: translateX(${(props) => props.amountToMove});
@@ -42,15 +68,15 @@ export const StyledCarouselSlides = styled.li`
 
 export const StyledLeftButton = styled(IoIosArrowForward)`
   color: white;
-  width: 2.5rem;
+  width: 10vw;
   height: auto;
   transform: rotate(180deg);
   border: none;
-  position: absolute;
+  /* position: absolute; */
   z-index: 2;
   top: 50%;
   translate: 0 -50%;
-  left: -2.5rem;
+  /* left: -2.5rem; */
   transition: all 0.3s;
   cursor: pointer;
 
@@ -62,14 +88,14 @@ export const StyledLeftButton = styled(IoIosArrowForward)`
 export const StyledRightButton = styled(IoIosArrowForward)`
   color: white;
 
-  width: 2.5rem;
+  width: 10vw;
   height: auto;
   border: none;
-  position: absolute;
+  /* position: absolute; */
   z-index: 2;
   top: 50%;
   translate: 0 -50%;
-  right: -2.5rem;
+  /* right: -2.5rem; */
   transition: all 0.3s;
   cursor: pointer;
 
@@ -79,6 +105,7 @@ export const StyledRightButton = styled(IoIosArrowForward)`
 `;
 
 export const StyledCarouselNav = styled.div`
+  height: auto;
   display: flex;
   justify-content: center;
   gap: 1rem;

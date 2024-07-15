@@ -57,6 +57,8 @@ export const StyledButton = styled.button`
   max-width: 400px;
   margin-top: 10px;
   margin-bottom: 2rem;
+
+  cursor: pointer;
 `;
 
 export const RigthsDiv = styled.div`

@@ -1,5 +1,6 @@
 import {
   StyledCarousel,
+  StyledCarousel2,
   StyledCarouselIndicator,
   StyledCarouselNav,
   StyledCarouselSlides,
@@ -58,13 +59,15 @@ export const ProductSlide = ({ slides }) => {
 
   return (
     <StyledCarousel>
-      <StyledLeftButton onClick={() => handleSlideChange(-1)} />
-      <StyledCarouselTrackContainer>
-        <StyledCarouselTrack amountToMove={`-${currentIndex * 100}%`}>
-          {Slides}
-        </StyledCarouselTrack>
-      </StyledCarouselTrackContainer>
-      <StyledRightButton onClick={() => handleSlideChange(+1)} />
+      <StyledCarousel2>
+        <StyledLeftButton onClick={() => handleSlideChange(-1)} />
+        <StyledCarouselTrackContainer>
+          <StyledCarouselTrack amountToMove={`-${currentIndex * 100}%`}>
+            {Slides}
+          </StyledCarouselTrack>
+        </StyledCarouselTrackContainer>
+        <StyledRightButton onClick={() => handleSlideChange(+1)} />
+      </StyledCarousel2>
       <StyledCarouselNav>{DotsNav}</StyledCarouselNav>
     </StyledCarousel>
   );

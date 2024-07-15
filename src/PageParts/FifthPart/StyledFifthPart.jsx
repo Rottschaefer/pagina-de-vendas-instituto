@@ -4,6 +4,7 @@ import backgroundImage from "../../assets/mockup-MP3.jpg";
 export const StyledFifthPart = styled.div`
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -16,6 +17,9 @@ export const StyledFifthPart = styled.div`
 `;
 
 export const StyledSubTitleConteiner = styled.div`
+  @media (min-width: 600px) {
+    height: 40vh;
+  }
   position: relative;
   overflow-x: hidden;
   display: flex;
@@ -38,5 +42,5 @@ export const StyledSubTitle = styled.h2`
   z-index: 0;
   width: 85vw;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: -1rem;
 `;
