@@ -21,6 +21,15 @@ export const StyledLogo = styled.img`
   margin-top: -10vw;
 `;
 
+const photoAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+`;
+
 export const StyledPerfil = styled.img`
   @media (min-width: 1000px) {
     height: 100vw;
@@ -35,7 +44,9 @@ export const StyledPerfil = styled.img`
   margin-bottom: -60px;
   margin-top: -15px;
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0;
+
+  animation: ${photoAnimation} 2s ease-in-out 1s forwards;
 `;
 
 export const StyledSubTitle = styled.h1`

@@ -10,12 +10,10 @@ export const StyledThirdPart = styled.div`
   justify-content: start;
   align-items: center;
   width: 100vw;
-  /* min-height: auto; */
   height: auto;
   background-image: url(${backgroundImage});
   z-index: -1;
   gap: 1rem;
-  padding-bottom: 3rem;
 `;
 export const StyledBackground = styled.div`
   position: absolute;
