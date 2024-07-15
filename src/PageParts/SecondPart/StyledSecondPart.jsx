@@ -6,6 +6,8 @@ import { GiTongue } from "react-icons/gi";
 import { RiHospitalLine } from "react-icons/ri";
 import { FaMoneyBillTrendUp } from "react-icons/fa6";
 
+const svgColor = "#fce5e5";
+
 export const StyledSecondPart = styled.div`
   overflow-x: hidden;
   display: flex;
@@ -16,16 +18,17 @@ export const StyledSecondPart = styled.div`
   width: 100vw;
   min-height: auto;
   padding-bottom: 3rem;
-  background-color: #bfaaae;
+  background: linear-gradient(135deg, #f3b6b6, #fff);
 `;
 
 export const StyledSubTitle = styled.h1`
   font-family: "giarek";
-  font-size: 1.7rem;
+  font-size: 2rem;
+  font-weight: 900;
   text-align: center;
   color: #591527;
   z-index: 1;
-  /* width: 85vw; */
+  margin: 3rem 2rem;
 `;
 
 export const StyledConteiner = styled.div`
@@ -33,6 +36,7 @@ export const StyledConteiner = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3rem;
 `;
 
 export const StyledSvgConteiner = styled.div`
@@ -48,7 +52,7 @@ export const StyledSvgConteiner = styled.div`
 `;
 
 export const StyledTooth = styled(LiaToothSolid)`
-  color: #bfaaae;
+  color: ${svgColor};
   height: 30vw;
   max-width: 150px;
 
@@ -56,7 +60,7 @@ export const StyledTooth = styled(LiaToothSolid)`
 `;
 
 export const StyledDoctor = styled(FaUserDoctor)`
-  color: #bfaaae;
+  color: ${svgColor};
   height: 23vw;
   max-width: 100px;
 
@@ -64,7 +68,7 @@ export const StyledDoctor = styled(FaUserDoctor)`
 `;
 
 export const StyledBoard = styled(BsClipboardHeart)`
-  color: #bfaaae;
+  color: ${svgColor};
   max-width: 100px;
 
   height: 23vw;
@@ -72,7 +76,7 @@ export const StyledBoard = styled(BsClipboardHeart)`
 `;
 
 export const StyledTongue = styled(GiTongue)`
-  color: #bfaaae;
+  color: ${svgColor};
   max-width: 100px;
 
   height: 23vw;
@@ -80,7 +84,7 @@ export const StyledTongue = styled(GiTongue)`
 `;
 
 export const StyledHospital = styled(RiHospitalLine)`
-  color: #bfaaae;
+  color: ${svgColor};
   max-width: 100px;
 
   height: 23vw;
@@ -88,7 +92,7 @@ export const StyledHospital = styled(RiHospitalLine)`
 `;
 
 export const StyledMoney = styled(FaMoneyBillTrendUp)`
-  color: #bfaaae;
+  color: ${svgColor};
   max-width: 100px;
 
   height: 23vw;
