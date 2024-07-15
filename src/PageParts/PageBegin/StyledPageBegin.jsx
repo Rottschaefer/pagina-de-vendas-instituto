@@ -9,7 +9,7 @@ export const StyledPageBegin = styled.div`
   align-items: center;
   width: 100vw;
   min-height: auto;
-  height: 100vh;
+  /* height: 100vh; */
   padding-bottom: 3rem;
   background-color: #591527;
   z-index: -1;
@@ -24,11 +24,11 @@ export const StyledLogo = styled.img`
 export const StyledPerfil = styled.img`
   @media (min-width: 1000px) {
     height: 100vw;
-    top: 500px;
+    top: 400px;
   }
   position: absolute;
 
-  top: 400px;
+  top: 152px;
   left: -60px;
   transform: translate(-50%, -50%);
   height: 100vh;
@@ -40,7 +40,7 @@ export const StyledPerfil = styled.img`
 
 export const StyledSubTitle = styled.h1`
   font-family: "giarek";
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-align: center;
   color: #bfaaae;
   z-index: 1;
@@ -50,9 +50,8 @@ export const StyledSubTitle = styled.h1`
 export const StyledSubTitleSpecial = styled.span`
   position: relative;
   font-family: "giarek";
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
-  /* text-decoration: underline; */
   color: white;
   margin: 0;
   z-index: 0;
@@ -83,7 +82,7 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   z-index: 0;
 `;
 
