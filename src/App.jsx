@@ -6,7 +6,6 @@ import { PageBegin } from "./PageParts/PageBegin/PageBegin";
 import { PageEnd } from "./PageParts/PageEnd/PageEnd";
 import { SecondPart } from "./PageParts/SecondPart/SecondPart";
 import { ThirdPart } from "./PageParts/ThirdPart/ThirdPart";
-import { doc } from "./GoogleAuth";
 
 function App() {
   return (
