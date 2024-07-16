@@ -1,5 +1,6 @@
 import {
   StyledButton,
+  StyledErrorMessage,
   StyledForm,
   StyledInput,
   StyledLogo,
@@ -12,6 +13,8 @@ import {
 import logo from "../../assets/MP - logo principal - branco.png";
 import perfil from "../../assets/perfil.png";
 import { useState } from "react";
+import { doc } from "../../GoogleAuth";
+import { Loading } from "../../Components/Loading/Loading";
 
 export const PageBegin = () => {
   const [formData, setFormData] = useState({
@@ -20,12 +23,59 @@ export const PageBegin = () => {
     phone: "",
   });
 
+  const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  async function addToGoogleSheets() {
+    try {
+      await doc.loadInfo(); // Carregar informações básicas do documento
+
+      const sheet = doc.sheetsByIndex[0];
+      await sheet.addRow({
+        Nome: formData.name,
+        Email: formData.email,
+        Telefone: formData.phone,
+      });
+    } catch (error) {
+      console.error("Erro ao testar a conexão com o Google Sheets:", error);
+    }
+  }
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({
       ...formData,
       [name]: value,
     });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phoneRegex = /^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$/;
+    const fullNameRegex = /^[a-zA-Zà-úÀ-Ú\s]{2,}(?: [a-zA-Zà-úÀ-Ú\s]+){1,}$/;
+
+    try {
+      if (!formData.name || !fullNameRegex.test(formData.name)) {
+        throw new Error("Por favor, coloque seu nome completo");
+      }
+
+      if (!formData.email || !emailRegex.test(formData.email)) {
+        throw new Error("Por favor, coloque um email válido");
+      }
+
+      if (!formData.phone || !phoneRegex.test(formData.phone)) {
+        throw new Error("Por favor, coloque um telefone válido com DDD");
+      }
+      setLoading(true);
+      setErrorMessage("");
+      await addToGoogleSheets();
+      window.location.href =
+        "https://docs.google.com/forms/d/e/1FAIpQLSeo6KtDJyGmC4i5zE70hnVk6ULklw142QLVa4Wz983DJO-Frw/viewform";
+    } catch (error) {
+      setLoading(false);
+      setErrorMessage(error.message);
+    }
   };
   return (
     <StyledPageBegin>
@@ -47,7 +97,7 @@ export const PageBegin = () => {
             placeholder="Nome Completo"
             type="text"
             name="name"
-            value={formData.firstName}
+            value={formData.name}
             onChange={handleInputChange}
             required
           />
@@ -56,9 +106,9 @@ export const PageBegin = () => {
         <label>
           <StyledInput
             placeholder="Seu melhor Email"
-            type="email"
+            type="text"
             name="email"
-            value={formData.lastName}
+            value={formData.email}
             onChange={handleInputChange}
             required
           />
@@ -67,15 +117,21 @@ export const PageBegin = () => {
         <label>
           <StyledInput
             placeholder="WhatsApp com DDD"
-            type="text"
+            type="phone"
             name="phone"
-            value={formData.email}
+            value={formData.phone}
             onChange={handleInputChange}
             required
           />
         </label>
         <br />
-        <StyledButton type="submit">Preencher Aplicação</StyledButton>
+        {errorMessage && (
+          <StyledErrorMessage>{errorMessage}</StyledErrorMessage>
+        )}
+        <StyledButton onClick={(e) => handleSubmit(e)}>
+          {!loading && "Preencher aplicação"}
+          {loading && <Loading />}
+        </StyledButton>
       </StyledForm>
     </StyledPageBegin>
   );

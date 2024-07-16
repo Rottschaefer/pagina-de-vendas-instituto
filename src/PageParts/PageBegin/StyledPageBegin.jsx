@@ -129,3 +129,29 @@ export const StyledButton = styled.button`
 
   cursor: pointer;
 `;
+
+const errorAnimation = keyframes`
+ from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 20px;
+    opacity: 1;
+  }
+`;
+
+export const StyledErrorMessage = styled.h3`
+  font-family: "giarek";
+  font-size: 1rem;
+  text-align: center;
+  color: #bfaaae;
+  width: 85vw;
+  height: auto;
+  margin: 0;
+  animation: ${errorAnimation} 1s ease-in-out forwards;
+
+  /* width: auto; */
+
+  /* transition: all 1s; */
+`;
