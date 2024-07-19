@@ -15,7 +15,7 @@ function App() {
       <SecondPart />
       <ThirdPart />
       <FourthPart />
-      <FifthPart />
+      {/* <FifthPart /> */}
       <PageEnd />
     </>
   );
