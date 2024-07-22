@@ -26,7 +26,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.drairmarottschaefer.com.br
-          username: mentoria@drairmarottschaefer.com.br
+          username: drairm25
           password: ${{ secrets.ftp_password }}
           local-dir: dist/
           server-dir: /public_html/mentoria/
