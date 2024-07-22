@@ -15,7 +15,7 @@ export const PageEnd = () => {
       <StyledFrontPhoto src={frontPhoto} />
       <StyledTitle>Sua Mentora</StyledTitle>
       <StyledDescription>
-        Meu nome é Irma Rottschaefer, sou odontopediatra a mais de 30 anos,
+        Meu nome é Irma Rottschaefer, sou odontopediatra há mais de 30 anos,
         empresária, mentora de odontopediatras e professora de freios orais,
         temos mais de 1000 alunas no Brasil e em mais de 13 países. Sou mãe da
         Clara, Eduardo e esposa do Cássio Tadeu. Especialista em cirurgia em
