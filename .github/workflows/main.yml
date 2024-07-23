@@ -20,6 +20,10 @@ jobs:
         run: npm install
 
       - name: 📂 Build Project
+        env:
+          VITE_GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.VITE_GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+          VITE_GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.VITE_GOOGLE_SERVICE_ACCOUNT_KEY }}
+          VITE_GOOGLE_SHEET_ID: ${{ secrets.VITE_GOOGLE_SHEET_ID }}
         run: npm run build
 
       - name: 📂 Sync files
