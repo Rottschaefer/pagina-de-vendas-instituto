@@ -71,6 +71,14 @@ export const PageBegin = () => {
       }
       setLoading(true);
       setErrorMessage("");
+      localStorage.setItem(
+        "irma-mentoria",
+        JSON.stringify({
+          Nome: formData.name,
+          Email: formData.email,
+          Telefone: formData.phone,
+        })
+      );
       await addToGoogleSheets();
 
       window.location.href =
