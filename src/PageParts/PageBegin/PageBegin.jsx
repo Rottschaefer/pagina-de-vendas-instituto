@@ -12,7 +12,7 @@ import {
 } from "./StyledPageBegin";
 import logo from "../../assets/MP - logo principal - branco.png";
 import perfil from "../../assets/perfil.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { doc } from "../../GoogleAuth";
 import { Loading } from "../../Components/Loading/Loading";
 
@@ -25,11 +25,10 @@ export const PageBegin = () => {
 
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [canRedirect, setCanRedirect] = useState(false);
 
   async function addToGoogleSheets() {
     try {
-      await doc.loadInfo();
+      await doc.loadInfo(); // Carregar informações básicas do documento
 
       const sheet = doc.sheetsByIndex[0];
       await sheet.addRow({
@@ -80,7 +79,6 @@ export const PageBegin = () => {
         })
       );
       await addToGoogleSheets();
-
       window.location.href =
         "https://docs.google.com/forms/d/e/1FAIpQLSeo6KtDJyGmC4i5zE70hnVk6ULklw142QLVa4Wz983DJO-Frw/viewform";
     } catch (error) {

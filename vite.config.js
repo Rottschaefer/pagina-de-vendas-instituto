@@ -7,4 +7,5 @@ export default defineConfig({
   base: "/mentoria/",
   plugins: [react(), nodePolyfills()],
   publicDir: "public",
+  base: "./",
 });

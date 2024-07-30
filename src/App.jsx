@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import GlobalStyle from "./GlobalStyle";
 import { FifthPart } from "./PageParts/FifthPart/FifthPart";
 import { FourthPart } from "./PageParts/FourthPart/FourthPart";
