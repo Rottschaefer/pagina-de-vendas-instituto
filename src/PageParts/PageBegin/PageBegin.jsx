@@ -38,6 +38,7 @@ export const PageBegin = () => {
       });
     } catch (error) {
       console.error("Erro ao testar a conexão com o Google Sheets:", error);
+      console.log(error.message);
     }
   }
 
@@ -69,6 +70,14 @@ export const PageBegin = () => {
       }
       setLoading(true);
       setErrorMessage("");
+      localStorage.setItem(
+        "irma-mentoria",
+        JSON.stringify({
+          Nome: formData.name,
+          Email: formData.email,
+          Telefone: formData.phone,
+        })
+      );
       await addToGoogleSheets();
       window.location.href =
         "https://docs.google.com/forms/d/e/1FAIpQLSeo6KtDJyGmC4i5zE70hnVk6ULklw142QLVa4Wz983DJO-Frw/viewform";
