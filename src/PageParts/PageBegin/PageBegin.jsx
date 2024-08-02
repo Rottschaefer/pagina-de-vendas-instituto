@@ -79,8 +79,7 @@ export const PageBegin = () => {
         })
       );
       await addToGoogleSheets();
-      window.location.href =
-        "https://docs.google.com/forms/d/e/1FAIpQLSeo6KtDJyGmC4i5zE70hnVk6ULklw142QLVa4Wz983DJO-Frw/viewform";
+      window.location.href = "https://drairmarottschaefer.com.br/aplicacao/";
     } catch (error) {
       setLoading(false);
       setErrorMessage(error.message);
