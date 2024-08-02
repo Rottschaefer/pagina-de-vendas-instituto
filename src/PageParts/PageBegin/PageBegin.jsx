@@ -73,9 +73,9 @@ export const PageBegin = () => {
       localStorage.setItem(
         "irma-mentoria",
         JSON.stringify({
-          Nome: formData.name,
-          Email: formData.email,
-          Telefone: formData.phone,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
         })
       );
       await addToGoogleSheets();
