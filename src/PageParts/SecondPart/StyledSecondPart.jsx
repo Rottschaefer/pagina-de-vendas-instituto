@@ -31,26 +31,6 @@ export const StyledSubTitle = styled.h1`
   margin: 3rem 2rem;
 `;
 
-export const StyledConteiner = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
-`;
-
-export const StyledSvgConteiner = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40vw;
-  max-width: 200px;
-  max-height: 200px;
-  height: 40vw;
-  background-color: #591527;
-  border-radius: 100%;
-`;
-
 export const StyledTooth = styled(LiaToothSolid)`
   color: ${svgColor};
   height: 30vw;
@@ -99,11 +79,20 @@ export const StyledMoney = styled(FaMoneyBillTrendUp)`
   width: auto;
 `;
 
-export const StyledDescription = styled.h2`
+export const StyledDescription = styled.li`
   font-family: "giarek";
   font-size: 1.7rem;
-  text-align: center;
+  text-align: left;
   color: #591527;
   z-index: 1;
   width: 85vw;
+`;
+
+export const StyledUlConteiner = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
 `;

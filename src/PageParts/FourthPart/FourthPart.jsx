@@ -13,11 +13,11 @@ export const FourthPart = () => {
       </StyledSubTitle>
       <StyledDescription>
         <StyledDescriptionSpecial>
-          Serão 3 dias em Niterói RJ, você terá acesso ao passo a passo dos meus
+          Serão 3 dias em Niterói-RJ, você terá acesso ao passo a passo dos meus
           atendimentos
         </StyledDescriptionSpecial>
-        , gestão das clínicas, prática no centro cirúrgico e na clínica com
-        minha supervisão (opção sujeito a disponibilidade)
+        , gestão das clínicas e observação da prática no centro cirúrgico e na
+        clínica sob minha supervisão (opção sujeita à disponibilidade)
       </StyledDescription>
     </StyledFourthPart>
   );
