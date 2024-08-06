@@ -15,6 +15,10 @@ export const StyledPageEnd = styled.div`
 `;
 
 export const StyledFrontPhoto = styled.img`
+  @media (min-width: 900px) {
+    width: 40vw;
+    height: 70vh;
+  }
   width: 75vw;
   height: 40vh;
   object-fit: cover;
@@ -42,7 +46,10 @@ export const StyledDescription = styled.p`
   margin: 0;
 `;
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(135deg, #591527, #732735);
   border-radius: 10px;
   border-color: #ffbdbd;

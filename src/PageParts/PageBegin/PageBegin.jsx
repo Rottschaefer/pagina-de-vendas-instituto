@@ -86,7 +86,7 @@ export const PageBegin = () => {
     }
   };
   return (
-    <StyledPageBegin>
+    <StyledPageBegin id="top">
       <StyledPerfil src={perfil} />
       <StyledLogo src={logo} />
       <StyledSubTitle>
@@ -113,7 +113,7 @@ export const PageBegin = () => {
         <br />
         <label>
           <StyledInput
-            placeholder="Seu melhor Email"
+            placeholder="Seu melhor e-mail"
             type="text"
             name="email"
             value={formData.email}

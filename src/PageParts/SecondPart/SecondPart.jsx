@@ -1,15 +1,14 @@
 import {
   StyledBoard,
-  StyledConteiner,
   StyledDescription,
   StyledDoctor,
   StyledHospital,
   StyledMoney,
   StyledSecondPart,
   StyledSubTitle,
-  StyledSvgConteiner,
   StyledTongue,
   StyledTooth,
+  StyledUlConteiner,
 } from "./StyledSecondPart";
 
 export const SecondPart = () => {
@@ -32,17 +31,13 @@ export const SecondPart = () => {
   ];
 
   const svgs = svgObjects.map((obj, id) => {
-    return (
-      <StyledConteiner key={id}>
-        <StyledSvgConteiner>{obj.svg}</StyledSvgConteiner>
-        <StyledDescription>{obj.text}</StyledDescription>
-      </StyledConteiner>
-    );
+    return <StyledDescription key={id}>{obj.text}</StyledDescription>;
   });
+
   return (
     <StyledSecondPart>
       <StyledSubTitle>A Mentoria Plena é para quem:</StyledSubTitle>
-      {svgs}
+      <StyledUlConteiner>{svgs}</StyledUlConteiner>
     </StyledSecondPart>
   );
 };

@@ -15,17 +15,17 @@ export const ThirdPart = () => {
     {
       title: "CONSULTORIA INDIVIDUAL",
       description:
-        "Assim que entrar na Mentoria você fará uma reunião online individual comigo, para criar um plano individualizado de acordo com seus objetivos",
+        "Assim que entrar na Mentoria, você fará uma reunião on-line individual comigo, para criar um plano individualizado de acordo com seus objetivos",
     },
     {
       title: "ENCONTROS AO VIVO",
       description:
-        "Quinzenalmente teremos encontros em grupo para feedbacks específicos, tira dúvidas, além das discussões de casos",
+        "Teremos dois encontros em grupo por mês ao vivo pelo Zoom para feedbacks específicos, tira dúvidas, além das discussões de casos",
     },
     {
       title: "MÉTODO",
       description:
-        "Acesso à todo meu método com aulas gravadas, para implementar diretamente em sua prática clínica",
+        "Acesso a todo meu método com aulas gravadas, para implementar diretamente em sua prática clínica",
     },
     {
       title: "ACOMPANHAMENTO",
@@ -35,7 +35,7 @@ export const ThirdPart = () => {
     {
       title: "PRÁTICA",
       description:
-        "Acesso aos vídeos de exercícios de cirúrgias e casos clínicos dos simples aos mais complexos",
+        "Acesso aos vídeos de exercícios de cirurgias e casos clínicos dos simples aos mais complexos",
     },
     {
       title: "COMUNIDADE",

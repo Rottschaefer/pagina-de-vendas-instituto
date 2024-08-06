@@ -7,7 +7,7 @@ import {
   StyledRigths,
   StyledTitle,
 } from "./StyledPageEnd";
-import frontPhoto from "../../assets/front_photo.jpg";
+import frontPhoto from "../../assets/second-front-photo.jpeg";
 
 export const PageEnd = () => {
   return (
@@ -19,12 +19,12 @@ export const PageEnd = () => {
         empresária, mentora de odontopediatras e professora de freios orais,
         temos mais de 1000 alunas no Brasil e em mais de 13 países. Sou mãe da
         Clara, Eduardo e esposa do Cássio Tadeu. Especialista em cirurgia em
-        odontopediatria, habilitada em laserterapia e mestranda em
-        odontopediatria. Meu propósito é conduzir cada dia mais profissionais a
-        se tornarem capacitados para potencializar seus atendimentos e negócios,
-        além de proporcionar uma melhor qualidade de vida aos seus pacientes.
+        odontopediatria, habilitada em laserterapia e mestre em odontopediatria.
+        Meu propósito é conduzir cada dia mais profissionais a se tornarem
+        capacitados para potencializar seus atendimentos e negócios, além de
+        proporcionar uma melhor qualidade de vida aos seus pacientes.
       </StyledDescription>
-      <StyledButton>Quero preencher minha aplicação</StyledButton>
+      <StyledButton href="#top">Quero preencher minha aplicação</StyledButton>
       <RigthsDiv>
         <StyledRigths>
           © Todos os direitos reservados | Irma Rottschaefer - 2024{" "}
