@@ -30,11 +30,16 @@ export const PageBegin = () => {
     try {
       await doc.loadInfo(); // Carregar informações básicas do documento
 
+      const date = new Date();
+
       const sheet = doc.sheetsByIndex[0];
       await sheet.addRow({
         Nome: formData.name,
         Email: formData.email,
         Telefone: formData.phone,
+        data: `${date.getDate()}/${
+          date.getMonth() + 1
+        }/${date.getFullYear()} - ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`,
       });
     } catch (error) {
       console.error("Erro ao testar a conexão com o Google Sheets:", error);
