@@ -58,11 +58,9 @@ export const PageBegin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const phoneRegex = /^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$/;
-    const fullNameRegex = /^[a-zA-Zà-úÀ-Ú\s]{2,}(?: [a-zA-Zà-úÀ-Ú\s]+){1,}$/;
 
     try {
-      if (!formData.name || !fullNameRegex.test(formData.name)) {
+      if (!formData.name) {
         throw new Error("Por favor, coloque seu nome completo");
       }
 
@@ -70,7 +68,7 @@ export const PageBegin = () => {
         throw new Error("Por favor, coloque um email válido");
       }
 
-      if (!formData.phone || !phoneRegex.test(formData.phone)) {
+      if (!formData.phone) {
         throw new Error("Por favor, coloque um telefone válido com DDD");
       }
       setLoading(true);
